@@ -6,15 +6,13 @@ pipeline {
     agent any
 
     stages {
-        stage('SQA baseline dynamic stages') {
-            when {
-                anyOf {
-                    branch 'master'
-                }
-            }
+        stage('SQA baseline criterion: QC.Doc') {
             steps {
                 script {
-                    projectConfig = pipelineConfig()
+                    projectConfig = pipelineConfig(
+                        configFile: '.sqa/config.yml',
+                        scmConfigs: [ localBranch: true ]
+                    )
                     buildStages(projectConfig)
                 }
             }
