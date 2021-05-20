@@ -1,7 +1,7 @@
 services:
   sqaaas-web:
     build:
-      dockerfile: .
+      context: .
     image: node
     volumes:
     - source: ./
