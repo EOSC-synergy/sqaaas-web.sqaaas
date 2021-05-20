@@ -1,7 +1,5 @@
 services:
   sqaaas-web:
-    container_name: "sqaaas-web"
-    hostname: "sqaaas-web"
     build:
       context: .
     image: node
@@ -10,4 +8,5 @@ services:
       target: /sqaaas-build
       type: bind
     working_dir: /sqaaas-build
+    command: sleep infinity
 version: '3.7'
