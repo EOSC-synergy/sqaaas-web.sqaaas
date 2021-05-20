@@ -1,11 +1,9 @@
 services:
-  node:
+  sqaaas-web:
     build:
       args: {}
       context: ''
       dockerfile: .
-    command: sleep infinity
-    hostname: sqaaas-web
     image: node
     volumes:
     - source: ./
