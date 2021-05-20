@@ -1,8 +1,6 @@
 services:
   sqaaas-web:
     build:
-      args: {}
-      context: ''
       dockerfile: .
     image: node
     volumes:
