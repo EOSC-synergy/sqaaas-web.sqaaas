@@ -1,13 +1,16 @@
 config:
-  credentials: []
+  credentials:
+  - id: docker_hub_cred
+    password_var: JPL_DOCKERPASS
+    username_var: JPL_DOCKERUSER
   project_repos: {}
 environment:
-  JPL_DOCKERPUSH: node
+  JPL_DOCKERPUSH: sqaaas-web
 sqa_criteria:
   qc_doc:
     repos:
       this_repo:
         commands:
         - npm install
-        container: node
+        container: sqaaas-web
 timeout: 600
