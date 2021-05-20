@@ -4,8 +4,6 @@ config:
     password_var: JPL_DOCKERPASS
     username_var: JPL_DOCKERUSER
   project_repos: {}
-environment:
-  JPL_DOCKERPUSH: sqaaas-web
 sqa_criteria:
   qc_doc:
     repos:
