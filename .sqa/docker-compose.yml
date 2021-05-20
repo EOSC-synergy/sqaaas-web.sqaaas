@@ -1,5 +1,6 @@
 services:
   sqaaas-web:
+    container_name: "sqaaas-web"
     build:
       context: .
     image: node
